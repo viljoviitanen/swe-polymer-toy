@@ -1,3 +1,5 @@
 {
-  "name": "SWE simple Polymer demo app"
+  "name": "SWE simple Polymer demo app",
+  "description": "demo app",
+  "success_url": "/"
 }
