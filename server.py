@@ -1,4 +1,5 @@
 from flask import Flask, request, send_from_directory, make_response, jsonify, redirect
+import os
 app = Flask(__name__)
 
 @app.route("/api/createsession/<path:token>")
@@ -28,4 +29,5 @@ def send(file):
     return send_from_directory('.', file)
 
 if __name__ == "__main__":
-    app.run()
+     port = int(os.environ.get("PORT", 5000))
+     app.run(host='0.0.0.0', port=port)
